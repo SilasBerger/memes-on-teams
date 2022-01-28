@@ -1,0 +1,7 @@
+---
+elements:
+  - id: image-container
+    align:
+      horizontal: center
+      vertical: center
+      with: center-anchor

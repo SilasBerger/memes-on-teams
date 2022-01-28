@@ -1,0 +1,18 @@
+
+@keyframes flyIn {
+  0% {
+    transform: translateX(1920px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1920px);
+  }
+}

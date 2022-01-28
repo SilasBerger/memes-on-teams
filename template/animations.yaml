@@ -1,0 +1,17 @@
+---
+onLoad:
+  animationSequences:
+    - "ImageOut"
+sequences:
+  - name: ImageIn
+    steps:
+      - duration: 1000
+        animations:
+          - id: image-container
+            name: flyIn
+  - name: ImageOut
+    steps:
+      - duration: 1000
+        animations:
+          - id: image-container
+            name: flyOut

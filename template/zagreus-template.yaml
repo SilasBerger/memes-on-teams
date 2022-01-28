@@ -1,0 +1,7 @@
+---
+name: memes-on-teams
+devServer:
+  address: localhost
+  port: 58179
+width: 1920
+height: 1080
