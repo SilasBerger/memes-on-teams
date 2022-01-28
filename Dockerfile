@@ -15,23 +15,17 @@ RUN rm -rf swagger-docs zagreus.zip
 RUN apt-get remove -y curl zip
 
 # Copy application files to workdir
-COPY template/ .
+COPY template ./template
 COPY shell.py .
 COPY requirements.txt .
+COPY run.sh .
 
 # Install Python dependencies, remove requirements file
 RUN pip3 install -r requirements.txt
 RUN rm requirements.txt
 
-# Start Zagreus server in the background
-
-# Build Zagreus template
-RUN export PATH=/app/zagreus-generator:$PATH
-RUN export PATH=/app/zagreus-server:$PATH
-
 # Expose web port
+EXPOSE 58179
 
 # Start Zagreus shell
-
-
-
+ENTRYPOINT [ "/bin/bash", "run.sh" ]
