@@ -18,7 +18,11 @@ RUN apt-get remove -y curl zip
 COPY template ./template
 COPY shell.py .
 COPY requirements.txt .
+COPY build-template.sh .
 COPY run.sh .
+
+# Build and upload Zagreus template
+RUN chmod u+x build-template.sh && ./build-template.sh && rm build-template.sh
 
 # Install Python dependencies, remove requirements file
 RUN pip3 install -r requirements.txt
