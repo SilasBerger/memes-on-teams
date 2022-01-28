@@ -26,7 +26,7 @@ RUN rm zagreus-generator
 
 # Copy application files to workdir
 COPY shell.py .
-COPY run.sh .
+COPY docker/shell/run.sh .
 
 # Expose web port
 EXPOSE 58179
